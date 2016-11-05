@@ -77,7 +77,7 @@ public class Matrix implements IMatrix {
         Matrix result = new Matrix(size);
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                int cellResult = 0;
+                double cellResult = 0;
                 for (int k = 0; k < size; k++) {
                     cellResult += matrix[i][k] * right.getMatrix()[j][k];
                 }
