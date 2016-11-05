@@ -1,0 +1,97 @@
+left
+
+1.0		2.0		3.0		4.0		5.0		
+2.0		2.0		2.0		2.0		2.0		
+3.0		1.0		1.0		1.0		3.0		
+0.0		0.0		2.0		3.0		-2.0		
+4.0		4.0		-4.0		0.0		0.0		
+
+right
+
+1.0		0.0		0.0		0.0		0.0		
+1.0		2.0		1.0		2.0		1.0		
+0.0		0.0		1.0		0.0		0.0		
+1.0		1.0		1.0		1.0		1.0		
+2.0		2.0		-2.0		2.0		2.0		
+
+addition
+
+2.0		2.0		3.0		4.0		5.0		
+3.0		4.0		3.0		4.0		3.0		
+3.0		1.0		2.0		1.0		3.0		
+1.0		1.0		3.0		4.0		-1.0		
+6.0		6.0		-6.0		2.0		2.0		
+
+subtraction
+
+0.0		2.0		3.0		4.0		5.0		
+1.0		0.0		1.0		0.0		1.0		
+3.0		1.0		0.0		1.0		3.0		
+-1.0		-1.0		1.0		2.0		-3.0		
+2.0		2.0		-2.0		-2.0		-2.0		
+
+multiplication
+
+1.0		21.0		3.0		15.0		18.0		
+2.0		14.0		2.0		10.0		12.0		
+3.0		11.0		1.0		9.0		14.0		
+0.0		6.0		2.0		3.0		-2.0		
+4.0		8.0		-4.0		4.0		24.0		
+
+Performance Test
+for size: 1000
+addition: 42678260
+subtraction: 40239998
+multiplication: 4428080884
+
+for size: 1100
+addition: 5555553
+subtraction: 35462101
+multiplication: 6040022093
+
+for size: 1200
+addition: 7423452
+subtraction: 5863184
+multiplication: 7632279766
+
+for size: 1300
+addition: 6139726
+subtraction: 5926392
+multiplication: 9501033066
+
+for size: 1400
+addition: 9767168
+subtraction: 8370600
+multiplication: 12004842190
+
+for size: 1500
+addition: 33394832
+subtraction: 8664206
+multiplication: 14680726790
+
+for size: 1600
+addition: 9345072
+subtraction: 44725485
+multiplication: 17889454302
+
+for size: 1700
+addition: 10356748
+subtraction: 43149264
+multiplication: 21338308086
+
+for size: 1800
+addition: 12462659
+subtraction: 11584249
+multiplication: 25171671608
+
+for size: 1900
+addition: 13117329
+subtraction: 13107018
+multiplication: 29707823117
+
+for size: 2000
+addition: 14934383
+subtraction: 15022235
+multiplication: 34515716440
+
+
