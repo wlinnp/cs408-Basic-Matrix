@@ -6,6 +6,8 @@ import java.util.Random;
  * @author Wai Phyo
  */
 public class Utils {
+    public static final String TAB_CHARACTER = "\t\t";
+    public static final String NEXT_LINE_CHARACTER = "\n";
     private Random random;
     private static Utils INSTANCE;
 

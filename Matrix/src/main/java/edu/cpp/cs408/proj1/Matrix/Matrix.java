@@ -1,5 +1,6 @@
 package edu.cpp.cs408.proj1.Matrix;
 
+import edu.cpp.cs408.proj1.Drivers.Utils;
 import edu.cpp.cs408.proj1.Operations.Addition;
 import edu.cpp.cs408.proj1.Operations.Operator;
 import edu.cpp.cs408.proj1.Operations.Subtraction;
@@ -89,12 +90,12 @@ public class Matrix implements IMatrix {
 
     @Override
     public String toString() {
-        StringBuilder result = new StringBuilder(NEXT_LINE_CHARACTER);
+        StringBuilder result = new StringBuilder(Utils.NEXT_LINE_CHARACTER);
         for (double[] row : matrix) {
             for (double cell : row) {
-                result.append(cell).append(TAB_CHARACTER);
+                result.append(cell).append(Utils.TAB_CHARACTER);
             }
-            result.append(NEXT_LINE_CHARACTER);
+            result.append(Utils.NEXT_LINE_CHARACTER);
         }
         return result.toString();
     }

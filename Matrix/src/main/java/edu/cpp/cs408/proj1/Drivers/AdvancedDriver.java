@@ -34,12 +34,12 @@ public class AdvancedDriver {
     public String performanceTest() {
         StringBuilder result = new StringBuilder("Performance Test\n");
         for (int i = START; i < END; i += 100) {
-            result.append("for size: ").append(i).append(IMatrix.NEXT_LINE_CHARACTER);
+            result.append("for size: ").append(i).append(Utils.NEXT_LINE_CHARACTER);
             createMatrixes(i);
-            result.append("addition: ").append(testPerformance(new AddExecutor())).append(IMatrix.NEXT_LINE_CHARACTER);
-            result.append("subtraction: ").append(testPerformance(new SubtractExecutor())).append(IMatrix.NEXT_LINE_CHARACTER);
-            result.append("multiplication: ").append(testPerformance(new ProductExecutor())).append(IMatrix.NEXT_LINE_CHARACTER);
-            result.append(IMatrix.NEXT_LINE_CHARACTER);
+            result.append("addition: ").append(testPerformance(new AddExecutor())).append(Utils.NEXT_LINE_CHARACTER);
+            result.append("subtraction: ").append(testPerformance(new SubtractExecutor())).append(Utils.NEXT_LINE_CHARACTER);
+            result.append("multiplication: ").append(testPerformance(new ProductExecutor())).append(Utils.NEXT_LINE_CHARACTER);
+            result.append(Utils.NEXT_LINE_CHARACTER);
         }
         return result.toString();
     }
