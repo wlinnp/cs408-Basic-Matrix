@@ -1,5 +1,6 @@
 package edu.cpp.cs408.proj1.Drivers;
 
+import edu.cpp.cs408.proj1.Matrix.IMatrix;
 import edu.cpp.cs408.proj1.Matrix.Matrix;
 
 import java.util.Scanner;
@@ -9,13 +10,10 @@ import java.util.Scanner;
  * <p>
  * @author Wai Phyo
  */
-public class UserDriver {
+public class UserDriver extends Driver {
     private Scanner scanner = new Scanner(System.in);
-    private int matrixSize = 0;
-    private Matrix matrixA;
-    private Matrix matrixB;
 
-    public UserDriver () {
+    public void start() {
         showMainMenu();
     }
 
@@ -30,7 +28,7 @@ public class UserDriver {
                     repeat = false;
                     break;
                 default:
-                    matrixSize = input;
+                    size = input;
                     fillMatrices();
                     operationMenu();
                     break;
@@ -39,24 +37,24 @@ public class UserDriver {
     }
 
     private void fillMatrices() {
-        if (matrixSize < 1) {
+        if (size < 1) {
             throw new RuntimeException("Invalid matrix size");
         }
-        matrixA = new Matrix(matrixSize);
-        matrixB = new Matrix(matrixSize);
+        left = new Matrix(size);
+        right = new Matrix(size);
         System.out.println("For first matrix");
-        fillSingleMatrix(matrixA, matrixSize);
+        fillSingleMatrix(left, size);
         System.out.println("For second matrix");
-        fillSingleMatrix(matrixB, matrixSize);
+        fillSingleMatrix(right, size);
     }
 
-    private void fillSingleMatrix(final Matrix matrix, int size) {
+    private void fillSingleMatrix(final IMatrix matrix, int size) {
         size *= size;
         while (size > 0) {
-            for (int i = 0; i < matrixSize; i++) {
-                for (int j = 0; j < matrixSize; j++) {
+            for (int i = 0; i < size; i++) {
+                for (int j = 0; j < size; j++) {
                     System.out.println("Enter value for cell [" + i +"][" + j + "]");
-                    matrix.setMatrixCell(i, j, scanner.nextInt());
+                    matrix.setMatrixCell(i, j, scanner.nextDouble());
                     size--;
                 }
             }
@@ -73,13 +71,13 @@ public class UserDriver {
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    System.out.println((matrixA.add(matrixB)).toString());
+                    System.out.println((left.add(right)).toString());
                     break;
                 case 2:
-                    System.out.println((matrixA.subtract(matrixB)).toString());
+                    System.out.println((left.subtract(right)).toString());
                     break;
                 case 3:
-                    System.out.println((matrixA.multiply(matrixB)).toString());
+                    System.out.println((left.multiply(right)).toString());
                     break;
                 case 0:
                     repeat = false;

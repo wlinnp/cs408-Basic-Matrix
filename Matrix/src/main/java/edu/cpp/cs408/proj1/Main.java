@@ -16,7 +16,8 @@ public class Main {
             runSimpleDriver();
             System.out.println(AdvancedDriver.getInstance().performanceTest());
         }
-        new UserDriver();
+        (new UserDriver()).start();
+
     }
 
     private static void runSimpleDriver() {

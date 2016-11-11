@@ -4,20 +4,17 @@ import edu.cpp.cs408.proj1.Drivers.Executor.AddExecutor;
 import edu.cpp.cs408.proj1.Drivers.Executor.IExecutor;
 import edu.cpp.cs408.proj1.Drivers.Executor.ProductExecutor;
 import edu.cpp.cs408.proj1.Drivers.Executor.SubtractExecutor;
-import edu.cpp.cs408.proj1.Matrix.IMatrix;
 import edu.cpp.cs408.proj1.Matrix.Matrix;
 
 /**
  * @author Wai Phyo
  */
-public class AdvancedDriver {
+public class AdvancedDriver extends Driver {
     private static AdvancedDriver INSTANCE;
     private static final int START = 1000;
     private static final int END = 2001;
     private static final int LOWER_BOUND = -10;
     private static final int UPPER_BOUND = 10;
-    private IMatrix left;
-    private IMatrix right;
     private Utils utils;
 
     private AdvancedDriver() {

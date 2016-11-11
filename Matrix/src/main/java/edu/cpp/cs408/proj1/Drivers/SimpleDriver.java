@@ -1,17 +1,13 @@
 package edu.cpp.cs408.proj1.Drivers;
 
-import edu.cpp.cs408.proj1.Matrix.IMatrix;
 import edu.cpp.cs408.proj1.Matrix.Matrix;
 
 /**
  * @author Wai Phyo
  */
-public class SimpleDriver {
+public class SimpleDriver extends Driver {
     private static double[] array1;
     private static double[] array2;
-    private static int size;
-    private IMatrix left;
-    private IMatrix right;
     private static SimpleDriver INSTANCE;
 
     private SimpleDriver() {
