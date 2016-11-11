@@ -43,19 +43,19 @@ public class UserDriver extends Driver {
         left = new Matrix(size);
         right = new Matrix(size);
         System.out.println("For first matrix");
-        fillSingleMatrix(left, size);
+        fillSingleMatrix(left);
         System.out.println("For second matrix");
-        fillSingleMatrix(right, size);
+        fillSingleMatrix(right);
     }
 
-    private void fillSingleMatrix(final IMatrix matrix, int size) {
-        size *= size;
-        while (size > 0) {
+    private void fillSingleMatrix(final IMatrix matrix) {
+        int matrixSize = size * size;
+        while (matrixSize > 0) {
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < size; j++) {
                     System.out.println("Enter value for cell [" + i +"][" + j + "]");
                     matrix.setMatrixCell(i, j, scanner.nextDouble());
-                    size--;
+                    matrixSize--;
                 }
             }
         }
